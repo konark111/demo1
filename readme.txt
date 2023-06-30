@@ -22,4 +22,4 @@ set PasswordAuthentication yes
 14. check playbook if you want to be sure by running ansible-playbook dep.yml --check
 15. if check is success run your pipeline and you have a fully ci/cd pipeline up and running, make changes to your git repo and commit and jenkins will automatically detect changes and integerate.
 Enjoy
-
+(webpage accessible at webserverip:80) 
