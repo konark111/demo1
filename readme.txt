@@ -17,10 +17,10 @@ set PasswordAuthentication yes
 8. in Build Steps --> Send files or execute commands over SSH --> ssh server --> select jenkins --> exec command ->rsync -avh /var/lib/jenkins/workspace/demo/* user@ip:/opt/ 
 9. in Post-build Actions --> Send build artifacts over SSH --> ssh server --> ansible --> exec command --> ansible-playbook /path to playbook/dep.yml
 10 apply and save
-11. got to ansible server and add web server ip to hosts/inventory file at /etc/ansible/hosts 
+11. go to ansible server and add web server ip to hosts/inventory file at /etc/ansible/hosts 
 12. check connectivity  bw ansible & webserver by running 'ansible (ip or alias from hosts file) -m ping'. if output ping:pong you are good.
 13. write ansible playbook(on path defined in post build actions) 
 14. check playbook if you want to be sure by running ansible-playbook dep.yml --check
-15. if check is success run your pipeline and you have a fully ci/cd pipeline up and running, make changes to your git repo and commit and jenkins will automatically detect changes and integerate.
+15. if check is success run your pipeline and you have a fully automated ci/cd pipeline up and running, make changes to your git repo and commit and jenkins will automatically detect changes and integerate.
 Enjoy
 (webpage accessible at webserverip:80) 
