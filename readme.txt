@@ -1,4 +1,4 @@
-end to end deployment cd/cd pipeline with git --> jenkins --> ansible --> ec2
+End to end deployment cd/cd pipeline with git --> jenkins --> ansible --> ec2
 Have 4 ec2 instances up and running
 Ensure passwrod less authentication between jenkins --> ansible & ansible --> webserver( via ssh-keygen & ssh-copy-id user@ip) && set password for users on all servers (passwd username)
 steps to be performed on all servers
