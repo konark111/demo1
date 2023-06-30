@@ -12,7 +12,7 @@ set PasswordAuthentication yes
 4. install and configure apache2(if ubuntu) on web server
 5. go to jenkins server install publish over ssh plugin and restart
 6. add ssh servers jenkins and ansible in manage jenkins --> system
-7. Create jenkins new item and select scm as git and add your repo and enable  GitHub hook trigger for GITScm polling.
+7. Create jenkins new item(free style project) and select scm as git and add your repo and enable  GitHub hook trigger for GITScm polling.
 7.b) generate api token in jenkins in configure and then in your git repo setting --> webhooks add webhook http/::jenkins server ip/github-webhook/ and add api token from jenkins and save.
 8. in Build Steps --> Send files or execute commands over SSH --> ssh server --> select jenkins --> exec command ->rsync -avh /var/lib/jenkins/workspace/demo/* user@ip:/opt/ 
 9. in Post-build Actions --> Send build artifacts over SSH --> ssh server --> ansible --> exec command --> ansible-playbook /path to playbook/dep.yml
