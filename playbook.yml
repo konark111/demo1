@@ -1,0 +1,14 @@
+---
+- hosts: web
+  become: yes
+  tasks:
+    - copy:
+        src: /opt/index.html
+        dest: /var/www/html
+    - name: Creates directory
+      file:
+        path: /var/www/html/css/
+        state: directory
+    - copy:
+        src: /opt/css/
+        dest: /var/www/html/css
