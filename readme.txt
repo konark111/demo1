@@ -6,7 +6,7 @@ steps to be performed on all servers
 PermitRootLogin to yes
 uncomment AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
 set PasswordAuthentication yes
-2. install and configure jenkins on jenkins server on ip@8080
+2. install and configure jenkins on jenkins server and access jenkins on ip@8080
 3. install and configure ansible on ansible server
 4. install and configure apache2(if ubuntu) on web server
 5. go to jenkins server install publish over ssh plugin and restart
