@@ -1,12 +1,12 @@
 End to end deployment cd/cd pipeline with git --> jenkins --> ansible --> ec2
 Have 3 ec2 instances up and running
-set password for users on all servers (passwd username) && Ensure password less authentication between jenkins --> ansible & ansible --> webserver( via ssh-keygen & ssh-copy-id user@ip)
+1.a)set password for users on all servers (passwd username) && Ensure password less authentication between jenkins --> ansible & ansible --> webserver( via ssh-keygen & ssh-copy-id user@ip)
 Steps to be performed on all servers
-1. vi /etc/ssh/sshd_config and change 
+1.b) vi /etc/ssh/sshd_config and change 
 PermitRootLogin to yes
 uncomment AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
 set PasswordAuthentication yes
-1.b) run systemctl restart sshd after making above changes
+1.c) run systemctl restart sshd after making above changes
 2. install and configure jenkins on jenkins server and access jenkins on ip@8080
 3. install and configure ansible on ansible server
 4. install and configure apache2(if ubuntu) on web server
